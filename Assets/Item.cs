@@ -6,6 +6,7 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+[System.Serializable]
 public class Item : MonoBehaviour
 {
   public string _name; //название
@@ -13,6 +14,24 @@ public class Item : MonoBehaviour
   public Sprite image; //картинка
   public int cout; //текушие количество в стаке
   public int maxCout; //максимальное количество в стаке
-  public bool ecvipment; //екепировать
+  public enum type
+  {
+    Value1,
+    Value2,
+    Value3
+  }
+
+  public type typeItem; //тип 
   public int cost; //стоимость 
+
+  public Item(string _name, string description, Sprite image, int cout, int maxCout, type typeItem, int cost)
+  {
+    this._name = _name;
+    this.description = description;
+    this.image = image;
+    this.cout = cout;
+    this.maxCout = maxCout;
+    this.typeItem = typeItem;
+    this.cost = cost;
+  }
 }

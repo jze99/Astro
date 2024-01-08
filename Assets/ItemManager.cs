@@ -12,12 +12,11 @@ public class ItemManager : MonoBehaviour
     public GameObject description;
     public GameObject options;
     public Item item;
-
-    public void OnEnable()
+    public void loading(Item _item)
     {
+        this.item = _item;
         Name.text = item._name;
         image.sprite = item.image;
-
     }
     public void ViewOptions()
     {
