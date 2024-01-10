@@ -17,4 +17,5 @@ public class ViewInventory : MonoBehaviour, IDragHandler
     {
         rectTransform.anchoredPosition += eventData.delta;
     }
+    
 }

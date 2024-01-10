@@ -20,13 +20,7 @@ public class InventoryManager : MonoBehaviour
     {
         //PlayerPrefs.GetInt("countItems", countItems);
         //conteinerInventory = transform.Find("Content");
-        if(countItems != 0)
-        {
-            for (int i = 0; i <= countItems; i++)
-            {
-                
-            }
-        }
+        
     }
     [ContextMenu("AddItems")]
     private void AddItems()
@@ -72,6 +66,8 @@ public class InventoryManager : MonoBehaviour
             items = savedData.itemsList;
         }
     }
+
+        
 
 }
 
