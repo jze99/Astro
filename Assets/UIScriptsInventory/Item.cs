@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 [System.Serializable]
-public class Item : MonoBehaviour
+public class Item
 {
   public string _name; //название
   public string description; //опесание
@@ -33,5 +33,15 @@ public class Item : MonoBehaviour
     this.maxCout = maxCout;
     this.typeItem = typeItem;
     this.cost = cost;
+  }
+  public Item(Item newItem)
+  {
+    this._name = newItem._name;
+    this.description = newItem.description;
+    this.image = newItem.image;
+    this.cout = newItem.cout;
+    this.maxCout = newItem.maxCout;
+    this.typeItem = newItem.typeItem;
+    this.cost = newItem.cost;
   }
 }
